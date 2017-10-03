@@ -114,25 +114,45 @@
             var alarm_times;
             var index;
 
-            current_time = 2;
-            alarm_times = [2,9,2,5];
-            alarm_texts = ['hola', 'hasta mañana', 'buenas noches','lerele'];
+            current_time = 9;
 
-            index = 3;
+            alarms = [
+                { time: 2, text: 'hola' },
+                { time: 9, text: 'hasta mañana' },
+                { time: 2, text: 'buenas noches' },
+                { time: 5, text: 'lerele' },
+                { time: 5, text: 'tete' },
+                { time: 5, text: 'ole' },
+                { time: 5, text: 'perenne' },
+                { time: 5, text: 'trucaba' },
+                { time: 5, text: 'el' },
+                { time: 5, text: 'manto' },
+                { time: 5, text: 'del' },
+                { time: 5, text: 'pianista' }
+            ];
             
-            while ( index > -1 ) {
+            var alarm;
+            var time;
+            var text;
 
-                if(current_time == alarm_times[index]) {
-                    console.log(alarm_texts[index]);
+            index = 0;
+            
+            while ( index < alarms.length ) {
+
+                alarm = alarms[index];
+                // alarm = { time: 2, text: 'hola' }
+                text = alarm.text;
+                //  text = hola
+                time = alarm.time;
+                //  time = 2
+
+                if(current_time == time ) {
+                    console.log(text);
                 }
 
-                index = index - 1;
+                index = index + 1;
             }
 
-            /**
-            buenas noches
-            hola
-            */
   
         </script>
 
